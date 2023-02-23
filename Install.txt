@@ -2,3 +2,6 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 sudo amazon-linux-extras install epel
 sudo amazon-linux-extras install java-openjdk11
+sudo yum install jenkins
+sudo systemctl enable jenkins --now
+sudo usermod -G jenkins ec2-user
